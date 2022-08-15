@@ -233,3 +233,26 @@
   background-color: white;
   color: #02b2c2;
 }
+.contact-section {
+  margin: 60px 0px 60px 0px;
+  height: 310px;
+}
+.contact-innerbox {
+  display: flex;
+}
+.innerbox1 {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.innerbox1 p {
+  padding: 0px 10px 0px 0px;
+}
+.innerbox2 {
+  width: 50%;
+}
+.icon1,
+.icon2,
+.icon3 {
+  margin: 05px 05px 05px 0px;
+}
