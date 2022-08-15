@@ -1,0 +1,235 @@
+.icon-size {
+  font-size: 40px;
+}
+.other-page-section {
+  margin: 60px 0px 60px 0px;
+}
+.other-page-section h2 {
+  text-align: center;
+}
+.box-area {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.single-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: auto;
+  border: 2px solid #f0f3f2;
+  border-radius: 4px;
+  background-color: #fff;
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+}
+.img-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  margin: 10px;
+  border-radius: 50%;
+}
+.bg-color1 {
+  background-color: #d8f5eb;
+}
+.bg-color2 {
+  background-color: #f0f5e0;
+}
+.bg-color3 {
+  background-color: #d4f5fe;
+}
+.bg-color4 {
+  background-color: #f5e2f0;
+}
+.bg-color5 {
+  background-color: #d4f5fe;
+}
+.bg-color6 {
+  background-color: #fde2dc;
+}
+.bg-color7 {
+  background-color: #daf5f5;
+}
+.bg-color8 {
+  background-color: #d8f5eb;
+}
+.notifi-Section {
+  margin: 60px 0px 60px 0px;
+}
+.notification-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.single-notification-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: auto;
+  border-radius: 4px;
+  margin: 20px;
+  padding: 20px;
+}
+.box1-color {
+  background-color: #f2f2f2;
+}
+.box2-color {
+  background-color: #ffffff;
+  box-shadow: 2px 3px 6px 2px #888888;
+}
+.inner-box1 {
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 4px;
+  padding: 10px 10px 2px 10px;
+  margin: 10px 0px 10px 0px;
+}
+.inner-box2 {
+  margin: 19px 0px 19px 0px;
+}
+.hand-margin {
+  margin: 5px;
+}
+.rules-regulation {
+  margin: 60px 0px 60px 0px;
+  width: 1349px;
+  height: 446px;
+  position: relative;
+}
+.rules-regulation h2 {
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0px 0px 0px;
+}
+.rules-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../../../../assets/Mosque.png);
+  width: 100%;
+  height: 100%;
+  -webkit-background-size: cover;
+  background-size: cover;
+  z-index: -1;
+}
+.rules-img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1da96b;
+  opacity: 0.5;
+}
+.text-carousel-style p {
+  padding: 60px;
+  color: white;
+}
+.objective {
+  margin: 60px 0px 60px 0px;
+}
+.objectives-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.objective-text {
+  width: 672px;
+  height: 346px;
+}
+.objective-text p {
+  padding: 10px 20px 0px 0px;
+  margin-right: 40px;
+  text-align: justify;
+}
+.objective-img {
+  width: 474px;
+  height: 432px;
+}
+.objective-img img {
+  border-radius: 8px;
+}
+.arrow-setting {
+  margin: 5px 5px 0px 5px;
+}
+.provincial-offices-section {
+  margin: 60px 0px 60px 0px;
+  background: #d4f5fe;
+  height: 484px;
+  width: 1349px;
+}
+.provincial-offices {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.provincial-offices h2 {
+  padding: 40px;
+}
+.historical-section {
+  margin: 60px 0px 60px 0px;
+  height: 427px;
+}
+.historical-section h2 {
+  text-align: center;
+  padding: 50px;
+}
+.carousel-item p {
+  margin: 30px;
+  text-align: justify;
+}
+.arow-bg {
+  background: gray;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  padding: 10px;
+}
+.set {
+  text-align: center;
+  color: #009668;
+}
+.sub-section {
+  margin: 38px 0px 38px 0px;
+  height: 416px;
+}
+.sub-inner-section {
+  display: flex;
+}
+.sub-inner-box1 {
+  background-color: #02b2c2;
+  color: white;
+}
+.inner-box1-content {
+  padding: 100px 0px 0px 50px;
+}
+.inner-box1-content p {
+  text-align: justify;
+  padding: 10px 40px 0px 0px;
+}
+.sub-inner-box1,
+.sub-inner-box2 {
+  width: 50%;
+  height: 416px;
+}
+.sub-btn {
+  background-color: white;
+  color: #02b2c2;
+}
