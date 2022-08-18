@@ -1,5 +1,31 @@
+.carousel {
+  height: calc(100vh - 56px);
+}
+.carousel-section {
+  margin: 0px;
+}
+.notfication-bar {
+  height: 50px;
+  background-color: #ff5739;
+  margin: 49px 0px 0px 0px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.notifi-bar-inner {
+  color: white;
+  padding: 10px;
+}
 .icon-size {
   font-size: 40px;
+}
+.other-page-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .other-page-section {
   margin: 60px 0px 60px 0px;
@@ -8,7 +34,9 @@
   text-align: center;
 }
 .box-area {
+  width: 90%;
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -21,7 +49,7 @@
   justify-content: center;
   width: 250px;
   height: auto;
-  border: 2px solid #f0f3f2;
+  border: 3px solid #f0f3f2;
   border-radius: 4px;
   background-color: #fff;
   text-align: center;
@@ -87,7 +115,7 @@
 }
 .box2-color {
   background-color: #ffffff;
-  box-shadow: 2px 3px 6px 2px #888888;
+  box-shadow: 0px 0px 5px 1px #888888;
 }
 .inner-box1 {
   display: flex;
@@ -104,8 +132,9 @@
 }
 .rules-regulation {
   margin: 60px 0px 60px 0px;
-  width: 1349px;
-  height: 446px;
+  width: 100%;
+  height: 466px;
+
   position: relative;
 }
 .rules-regulation h2 {
@@ -114,7 +143,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 50px 0px 0px 0px;
+  padding: 40px 0px 0px 0px;
 }
 .rules-img {
   position: absolute;
@@ -122,7 +151,7 @@
   left: 0;
   background-image: url(../../../../assets/Mosque.png);
   width: 100%;
-  height: 100%;
+  height: 446px;
   -webkit-background-size: cover;
   background-size: cover;
   z-index: -1;
@@ -138,8 +167,11 @@
   opacity: 0.5;
 }
 .text-carousel-style p {
-  padding: 60px;
+  padding: 30px 100px 50px 100px;
   color: white;
+}
+.carousel-indicators {
+  margin-top: -50px;
 }
 .objective {
   margin: 60px 0px 60px 0px;
@@ -172,7 +204,7 @@
   margin: 60px 0px 60px 0px;
   background: #d4f5fe;
   height: 484px;
-  width: 1349px;
+  width: 100%;
 }
 .provincial-offices {
   display: flex;
@@ -186,10 +218,15 @@
 .historical-section {
   margin: 60px 0px 60px 0px;
   height: 427px;
+  width: 100%;
 }
 .historical-section h2 {
   text-align: center;
   padding: 50px;
+}
+.historical-text-mar p {
+  margin: 0px 30px 0px 30px;
+  padding: 0px 100px 0px 100px;
 }
 .carousel-item p {
   margin: 30px;
