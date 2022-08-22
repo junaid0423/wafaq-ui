@@ -6,12 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./admin.component.scss'],
 })
 export class AdminComponent implements OnInit {
-  toggle: boolean = true;
   constructor() {}
 
   ngOnInit(): void {}
-
-  toggleMenu() {
-    this.toggle = !this.toggle;
-  }
 }
