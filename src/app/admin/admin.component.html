@@ -1,1 +1,177 @@
-<router-outlet></router-outlet>
+<div class="container">
+  <div class="navigation" *ngIf="toggle">
+    <ul>
+      <li>
+        <a href="#">
+          <span class="icon"
+            ><img src="../../assets/logo.png" width="50" height="40"
+          /></span>
+          <span class="title main-title">Tanzeem Ul Madaris</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="icon"
+            ><i class="fa fa-dashboard" aria-hidden="true"></i>
+          </span>
+          <span class="title">Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="icon"
+            ><i class="fa fa-object-group" aria-hidden="true"></i
+          ></span>
+          <span class="title">Objective</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="icon"
+            ><i class="fa fa-building" aria-hidden="true"></i>
+          </span>
+          <span class="title">Provincial Office</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="icon"
+            ><i class="fa fa-download" aria-hidden="true"></i>
+          </span>
+          <span class="title">Downloads</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="icon"
+            ><i class="fa fa-graduation-cap" aria-hidden="true"></i>
+          </span>
+          <span class="title">Exam Result</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="icon"
+            ><i class="fa fa-history" aria-hidden="true"></i>
+          </span>
+          <span class="title">Background</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="icon"><i class="fa-solid fa-school"></i></span>
+          <span class="title">School Of Order</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="icon"><i class="fa fa-sign-out"></i></span>
+          <span class="title">Sign Out</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div
+    class="navigation"
+    style="width: 60px; transition: 0.5s ease"
+    *ngIf="!toggle"
+  >
+    <ul>
+      <li>
+        <a href="#">
+          <span class="icon"
+            ><img src="../../assets/logo.png" width="50" height="40"
+          /></span>
+          <span class="title main-title">Tanzeem Ul Madaris</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="icon"
+            ><i class="fa fa-dashboard" aria-hidden="true"></i>
+          </span>
+          <span class="title">Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="icon"
+            ><i class="fa fa-object-group" aria-hidden="true"></i
+          ></span>
+          <span class="title">Objective</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="icon"
+            ><i class="fa fa-building" aria-hidden="true"></i>
+          </span>
+          <span class="title">Provincial Office</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="icon"
+            ><i class="fa fa-download" aria-hidden="true"></i>
+          </span>
+          <span class="title">Downloads</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="icon"
+            ><i class="fa fa-graduation-cap" aria-hidden="true"></i>
+          </span>
+          <span class="title">Exam Result</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="icon"
+            ><i class="fa fa-history" aria-hidden="true"></i>
+          </span>
+          <span class="title">Background</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="icon"><i class="fa-solid fa-school"></i></span>
+          <span class="title">School Of Order</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="icon"><i class="fa fa-sign-out"></i></span>
+          <span class="title">Sign Out</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="main" *ngIf="toggle">
+    <div class="topbar">
+      <div class="toggle" (click)="toggleMenu()"></div>
+      <div class="org-title">
+        <div class="title-tanzeem"><span>Tanzeem Ul Madaris</span></div>
+      </div>
+      <div class="user">
+        <img src="../../assets/user.png" />
+      </div>
+    </div>
+
+    <div class="main-short" *ngIf="!toggle">
+      <div class="topbar">
+        <div class="toggle" (click)="toggleMenu()"></div>
+        <div class="org-title">
+          <div class="title-tanzeem"><span>Tanzeem Ul Madaris</span></div>
+        </div>
+        <div class="user">
+          <img src="../../assets/user.png" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <router-outlet></router-outlet>
+</div>
