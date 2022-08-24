@@ -1,5 +1,5 @@
 <div class="parent">
-  <div class="side-navigation">
+  <div class="side-navigation" id="slide">
     <!-- logo section -->
     <div class="logo">
       <img src="../../assets/logo.png" />
@@ -9,90 +9,91 @@
     <!-- navigations -->
 
     <div class="nav-sec">
-      <div class="nav-element">
-        <span>
-          <img src="../../assets/logo.png" />
-          <!-- <i class="fa fa-dashboard" aria-hidden="true"></i> -->
-        </span>
-        <label class="label-class">Dashboard</label>
-      </div>
-      <div class="nav-element">
-        <span>
-          <img src="../../assets/logo.png" />
-          <!-- <i class="fa fa-dashboard" aria-hidden="true"></i> -->
-        </span>
-        <label class="label-class">Objective</label>
-      </div>
-      <div class="nav-element">
-        <span>
-          <img src="../../assets/logo.png" />
-          <!-- <i class="fa fa-dashboard" aria-hidden="true"></i> -->
-        </span>
-        <label class="label-class">Provincial Office</label>
-      </div>
-      <!-- <div>
-        <a href="#">
-          <span class="icon"
-            ><i class="fa fa-object-group" aria-hidden="true"></i
-          ></span>
-          <span class="title">Objective</span>
-        </a>
-      </div>
-      <div>
-        <a href="#">
-          <span class="icon"
-            ><i class="fa fa-building" aria-hidden="true"></i>
+      <div class="nav-element-wrapper">
+        <div class="nav-element">
+          <span class="icon-size">
+            <i class="fa fa-dashboard" aria-hidden="true"></i>
           </span>
-          <span class="title">Provincial Office</span>
-        </a>
+          <label class="label-class">Dashboard</label>
+        </div>
       </div>
-      <div>
-        <a href="#">
-          <span class="icon"
-            ><i class="fa fa-download" aria-hidden="true"></i>
+
+      <div class="nav-element-wrapper">
+        <div class="nav-element">
+          <span class="icon-size">
+            <i class="fa fa-object-group" aria-hidden="true"></i>
           </span>
-          <span class="title">Downloads</span>
-        </a>
+          <label class="label-class">Objective</label>
+        </div>
       </div>
-      <div>
-        <a href="#">
-          <span class="icon"
-            ><i class="fa fa-graduation-cap" aria-hidden="true"></i>
+
+      <div class="nav-element-wrapper">
+        <div class="nav-element">
+          <span class="icon-size">
+            <i class="fa fa-building" aria-hidden="true"></i>
           </span>
-          <span class="title">Exam Result</span>
-        </a>
+          <label class="label-class">Provincial Offices</label>
+        </div>
       </div>
-      <div>
-        <a href="#">
-          <span class="icon"
-            ><i class="fa fa-history" aria-hidden="true"></i>
+
+      <div class="nav-element-wrapper">
+        <div class="nav-element">
+          <span class="icon-size">
+            <i class="fa fa-download" aria-hidden="true"></i>
           </span>
-          <span class="title">Background</span>
-        </a>
+          <label class="label-class">Downloads</label>
+        </div>
       </div>
-      <div>
-        <a href="#">
-          <span class="icon"><i class="fa-solid fa-school"></i></span>
-          <span class="title">School Of Order</span>
-        </a>
+
+      <div class="nav-element-wrapper">
+        <div class="nav-element">
+          <span class="icon-size">
+            <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+          </span>
+          <label class="label-class">Exam Results</label>
+        </div>
       </div>
-      <div>
-        <a href="#">
-          <span class="icon"><i class="fa fa-sign-out"></i></span>
-          <span class="title">Sign Out</span>
-        </a>
+
+      <div class="nav-element-wrapper">
+        <div class="nav-element">
+          <span class="icon-size">
+            <i class="fa fa-history" aria-hidden="true"></i>
+          </span>
+          <label class="label-class">Background</label>
+        </div>
       </div>
-    </div> -->
+
+      <div class="nav-element-wrapper">
+        <div class="nav-element">
+          <span class="icon-size">
+            <i class="fa-solid fa-school"></i>
+          </span>
+          <label class="label-class">School Of Order</label>
+        </div>
+      </div>
+
+      <div class="nav-element-wrapper">
+        <div class="nav-element">
+          <span class="icon-size">
+            <i class="fa fa-sign-out"></i>
+          </span>
+          <label class="label-class">Sign Out</label>
+        </div>
+      </div>
     </div>
   </div>
+
   <div class="main-sec">
-    <div class="topbar">
-      <div class="org-title">
+    <div class="topbar container-fluid">
+      <div class="brand-title"><h5>Tanzeem Ul Madaris</h5></div>
+      <div class="user-img"><img src="../../assets/user.png" /></div>
+
+      <!-- <div class="org-title">
         <div class="title-tanzeem"><span>Tanzeem Ul Madaris</span></div>
       </div>
       <div class="user">
         <img src="../../assets/user.png" />
-      </div>
+      </div> -->
     </div>
     <div class="main-router">
       <router-outlet></router-outlet>
