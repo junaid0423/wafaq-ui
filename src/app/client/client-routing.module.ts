@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ClientComponent } from './client.component';
+import { DownloadsComponent } from './pages/downloads/downloads.component';
+import { ExamResultsComponent } from './pages/exam-results/exam-results.component';
 import { LandingComponent } from './pages/landing/landing.component';
 
 const routes: Routes = [
@@ -18,6 +20,14 @@ const routes: Routes = [
         path: '',
         redirectTo: '/c/landing',
         pathMatch: 'full',
+      },
+      {
+        path: 'downloads',
+        component: DownloadsComponent,
+      },
+      {
+        path: 'exam-results',
+        component: ExamResultsComponent,
       },
     ],
   },

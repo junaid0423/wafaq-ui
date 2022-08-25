@@ -1,1 +1,102 @@
-<router-outlet></router-outlet>
+<div class="parent">
+  <div class="side-navigation" id="slide">
+    <!-- logo section -->
+    <div class="logo">
+      <img src="../../assets/logo.png" />
+      <label class="title label-class">Tanzeem Ul Madaris</label>
+    </div>
+
+    <!-- navigations -->
+
+    <div class="nav-sec">
+      <div class="nav-element-wrapper">
+        <div class="nav-element">
+          <span class="icon-size">
+            <i class="fa fa-dashboard" aria-hidden="true"></i>
+          </span>
+          <label class="label-class">Dashboard</label>
+        </div>
+      </div>
+
+      <div class="nav-element-wrapper">
+        <div class="nav-element">
+          <span class="icon-size">
+            <i class="fa fa-object-group" aria-hidden="true"></i>
+          </span>
+          <label class="label-class">Objective</label>
+        </div>
+      </div>
+
+      <div class="nav-element-wrapper">
+        <div class="nav-element">
+          <span class="icon-size">
+            <i class="fa fa-building" aria-hidden="true"></i>
+          </span>
+          <label class="label-class">Provincial Offices</label>
+        </div>
+      </div>
+
+      <div class="nav-element-wrapper">
+        <div class="nav-element">
+          <span class="icon-size">
+            <i class="fa fa-download" aria-hidden="true"></i>
+          </span>
+          <label class="label-class">Downloads</label>
+        </div>
+      </div>
+
+      <div class="nav-element-wrapper">
+        <div class="nav-element">
+          <span class="icon-size">
+            <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+          </span>
+          <label class="label-class">Exam Results</label>
+        </div>
+      </div>
+
+      <div class="nav-element-wrapper">
+        <div class="nav-element">
+          <span class="icon-size">
+            <i class="fa fa-history" aria-hidden="true"></i>
+          </span>
+          <label class="label-class">Background</label>
+        </div>
+      </div>
+
+      <div class="nav-element-wrapper">
+        <div class="nav-element">
+          <span class="icon-size">
+            <i class="fa-solid fa-school"></i>
+          </span>
+          <label class="label-class">School Of Order</label>
+        </div>
+      </div>
+
+      <div class="nav-element-wrapper">
+        <div class="nav-element">
+          <span class="icon-size">
+            <i class="fa fa-sign-out"></i>
+          </span>
+          <label class="label-class">Sign Out</label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-sec">
+    <div class="topbar container-fluid">
+      <div class="brand-title"><h5>Tanzeem Ul Madaris</h5></div>
+      <div class="user-img"><img src="../../assets/user.png" /></div>
+
+      <!-- <div class="org-title">
+        <div class="title-tanzeem"><span>Tanzeem Ul Madaris</span></div>
+      </div>
+      <div class="user">
+        <img src="../../assets/user.png" />
+      </div> -->
+    </div>
+    <div class="main-router">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
