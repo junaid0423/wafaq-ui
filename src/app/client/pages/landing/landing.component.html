@@ -1,10 +1,6 @@
 <div>
-  <!-- Navbar starts here-->
-  <app-navbar></app-navbar>
-  <!-- Navbar ends here-->
-
   <!-- Homepage Slider starts here-->
-  <section class="carousel-section">
+  <section class="carousel-section flex-column">
     <div class="carousel slide" data-ride="carousel" id="mycarousel">
       <div class="carousel-inner">
         <div class="carousel-item active" data-interval="2500">
@@ -16,11 +12,11 @@
         <div class="carousel-item" data-interval="2500">
           <img src="../../../../assets/3.png" class="d-block w-100 h-100" />
         </div>
-        <!-- <ul class="carousel-indicators">
+        <ul class="carousel-indicators">
           <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
           <li data-target="#mycarousel" data-slide-to="1"></li>
           <li data-target="#mycarousel" data-slide-to="2"></li>
-        </ul> -->
+        </ul>
       </div>
       <a href="#mycarousel" class="carousel-control-prev" data-slide="prev">
         <span class="carousel-control-prev-icon"></span>
@@ -31,171 +27,93 @@
     </div>
     <div class="notifi-bar-inner">
       <p>
-        <span class="far fa-hand-point-right hand-margin"></span>Lorem, ipsum
-        dolor sit amet consectetur adipisicing elit. Eius, provident?
+        <span class="m-2 far fa-hand-point-right"></span>Lorem, ipsum dolor sit
+        amet consectetur adipisicing elit. Eius, provident?
       </p>
     </div>
   </section>
   <!-- Homepage Slider ends here-->
 
-  <!-- Homepage Notification Bar starts here-->
-  <!-- <section class="notfication-bar">
-    <div class="notifi-bar-inner">
-      <p>
-        <span class="far fa-hand-point-right hand-margin"></span>Lorem, ipsum
-        dolor sit amet consectetur adipisicing elit. Eius, provident?
-      </p>
-    </div>
-  </section> -->
-
-  <!-- Homepage Notification Bar ends here-->
-
-  <!-- Other page section starts here-->
-  <section class="other-page-section">
-    <h2>Other Pages</h2>
-    <div class="box-area">
-      <div class="single-box">
-        <div class="img-area bg-color1">
-          <span class="far fa-file-alt icon-size"></span>
-        </div>
-        <div class="img-text">
-          <span class="header-text"><strong>School Of Orders</strong></span>
-        </div>
-      </div>
-
-      <div class="single-box">
-        <div class="img-area bg-color2">
-          <span class="fa fa-tasks icon-size"></span>
-        </div>
-        <div class="img-text">
-          <span class="header-text"><strong>Management</strong></span>
-        </div>
-      </div>
-
-      <div class="single-box">
-        <div class="img-area bg-color3">
-          <span class="fas fa-user-graduate icon-size"></span>
-        </div>
-        <div class="img-text">
-          <span class="header-text"><strong>Exams Result</strong></span>
-        </div>
-      </div>
-
-      <div class="single-box">
-        <div class="img-area bg-color4">
-          <span class="fas fa-chalkboard-teacher icon-size"></span>
-        </div>
-        <div class="img-text">
-          <span class="header-text"><strong>Curriculum Education</strong></span>
-        </div>
-      </div>
-
-      <div class="single-box">
-        <div class="img-area bg-color5">
-          <span class="far fa-images icon-size"></span>
-        </div>
-        <div class="img-text">
-          <span class="header-text"><strong>Gallery</strong></span>
-        </div>
-      </div>
-
-      <div class="single-box">
-        <div class="img-area bg-color6">
-          <span class="fa fa-download icon-size"></span>
-        </div>
-        <div class="img-text">
-          <span class="header-text"><strong>Downloads</strong></span>
-        </div>
-      </div>
-
-      <div class="single-box">
-        <div class="img-area bg-color7">
-          <span class="fa fa-award icon-size"></span>
-        </div>
-        <div class="img-text">
-          <span class="header-text"><strong>Position Holders</strong></span>
-        </div>
-      </div>
-
-      <div class="single-box">
-        <div class="img-area bg-color8">
-          <span class="far fa-file-alt icon-size"></span>
-        </div>
-        <div class="img-text">
-          <span class="header-text"><strong>School Of Orders</strong></span>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!--main other page section div-->
-  <!-- other page section ends here -->
-
   <!-- Notification Section starts here -->
-  <section class="notifi-Section">
-    <div class="notification-section container">
-      <div class="single-notification-box box1-color">
-        <div class="box1">
-          <h4>Notifications</h4>
-          <div class="inner-box1">
-            <span class="far fa-hand-point-right hand-margin"></span>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-          </div>
-          <div class="inner-box1">
-            <span class="far fa-hand-point-right hand-margin"></span>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-          </div>
-          <div class="inner-box1">
-            <span class="far fa-hand-point-right hand-margin"></span>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-          </div>
-          <div class="inner-box1">
-            <span class="far fa-hand-point-right hand-margin"></span>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-          </div>
-          <div class="inner-box1">
-            <span class="far fa-hand-point-right hand-margin"></span>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-          </div>
-          <div class="inner-box1">
-            <span class="far fa-hand-point-right hand-margin"></span>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-          </div>
+  <section class="notification-section container">
+    <div class="single-notification-box box1-color">
+      <div class="box1">
+        <h4>Notifications</h4>
+        <div class="inner-box1" *ngFor="let item of notifications">
+          <span class="far fa-hand-point-right m-2"></span>
+          <p>{{ item }}</p>
         </div>
       </div>
-      <div class="single-notification-box box2-color">
-        <div class="box2">
-          <h4>Quick Links</h4>
-          <div class="inner-box2">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-          </div>
+    </div>
+    <div class="single-notification-box box2-color">
+      <div class="box2">
+        <h4>Quick Links</h4>
+        <div class="inner-box2" *ngFor="let item of quickLinks">
+          <p>{{ item }}</p>
           <hr />
-          <div class="inner-box2">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-          </div>
-          <hr />
-          <div class="inner-box2">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-          </div>
-          <hr />
-          <div class="inner-box2">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-          </div>
-          <hr />
-          <div class="inner-box2">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-          </div>
-          <hr />
-          <div class="inner-box2">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-          </div>
         </div>
       </div>
     </div>
   </section>
   <!-- Notification Section ends here -->
 
+  <!-- our provincial Office section starts here -->
+  <section id="offices" class="provincial-offices-section flex-column">
+    <h2>Our Provincial Offices</h2>
+    <div class="carousel slide" data-ride="carousel" id="Provincialcarousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-interval="2500">
+          <img src="../../../../assets/POB.png" class="d-block" />
+        </div>
+        <div class="carousel-item" data-interval="2500">
+          <img src="../../../../assets/POB.png" class="d-block" />
+        </div>
+        <div class="carousel-item" data-interval="2500">
+          <img src="../../../../assets/POB.png" class="d-block" />
+        </div>
+        <ul class="carousel-indicators">
+          <li
+            class="clr"
+            data-target="#Provincialcarousel"
+            data-slide-to="0"
+            class="active"
+          ></li>
+          <li
+            class="clr"
+            data-target="#Provincialcarousel"
+            data-slide-to="1"
+          ></li>
+          <li
+            class="clr"
+            data-target="#Provincialcarousel"
+            data-slide-to="2"
+          ></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!-- our provincial Office section ends here -->
+
+  <!-- Other page section starts here-->
+  <section class="other-page-section flex-column">
+    <h2>Other Pages</h2>
+    <div class="box-area">
+      <div class="single-box" *ngFor="let item of navOptions">
+        <div class="img-area bg-color1">
+          <span class="far {{ item.icon }} icon-size"></span>
+        </div>
+        <div class="img-text">
+          <span class="header-text"
+            ><strong>{{ item.key }}</strong></span
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Other page section ends here-->
+
   <!-- Rules and Regulation Section starts here -->
-  <section class="rules-regulation">
+  <section class="rules-regulation flex-column">
     <div class="rules-img"></div>
     <h2>Rules and Regulation</h2>
     <div class="carousel slide" data-ride="carousel" id="textcarousel">
@@ -277,7 +195,7 @@
   <!-- Rules and Regulation ends here -->
 
   <!-- Objectives & Objectives starts here -->
-  <section class="objective">
+  <section id="objectives">
     <div class="container objectives-section">
       <div class="objective-text">
         <h4>Objective & Objectives</h4>
@@ -302,47 +220,8 @@
   </section>
   <!-- Objectives & Objectives ends here -->
 
-  <!-- our provincial Office section starts here -->
-  <section class="provincial-offices-section">
-    <div class="provincial-offices">
-      <h2>Our Provincial Offices</h2>
-      <div class="carousel slide" data-ride="carousel" id="Provincialcarousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active" data-interval="2500">
-            <img src="../../../../assets/POB.png" class="d-block" />
-          </div>
-          <div class="carousel-item" data-interval="2500">
-            <img src="../../../../assets/POB.png" class="d-block" />
-          </div>
-          <div class="carousel-item" data-interval="2500">
-            <img src="../../../../assets/POB.png" class="d-block" />
-          </div>
-          <ul class="carousel-indicators">
-            <li
-              class="clr"
-              data-target="#Provincialcarousel"
-              data-slide-to="0"
-              class="active"
-            ></li>
-            <li
-              class="clr"
-              data-target="#Provincialcarousel"
-              data-slide-to="1"
-            ></li>
-            <li
-              class="clr"
-              data-target="#Provincialcarousel"
-              data-slide-to="2"
-            ></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- our provincial Office section ends here -->
-
   <!-- Historical Background section starts here -->
-  <section class="historical-section">
+  <section id="background" class="historical-section flex-column">
     <h2>Historical Background and Services</h2>
     <div class="historical-background">
       <div class="carousel slide" data-ride="carousel" id="historycarousel">
@@ -464,7 +343,7 @@
   <!-- Subscribe section ends here -->
 
   <!-- contact section starts here -->
-  <section class="contact-section">
+  <section id="contact-us" class="contact-section">
     <div class="container contact-innerbox">
       <div class="innerbox1">
         <h2>Contact Us</h2>

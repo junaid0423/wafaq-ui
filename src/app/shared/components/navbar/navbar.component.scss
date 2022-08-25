@@ -1,1 +1,11 @@
-
+.parent {
+  position: fixed;
+  top: 0;
+  z-index: 11;
+  width: 100%;
+  background-color: white;
+  border-bottom: 1px solid #d9d6d6;
+}
+.nav-link {
+  cursor: pointer;
+}
