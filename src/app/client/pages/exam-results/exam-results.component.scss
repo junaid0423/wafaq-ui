@@ -57,5 +57,22 @@
       padding: 20px 50px;
       text-align: center;
     }
+    .form-main {
+      border: 1px solid #bce8f1;
+      .form-spacing {
+        text-align: right;
+        margin-top: 20px;
+        .form-inline {
+          justify-content: flex-end;
+        }
+      }
+      .btn-primary {
+        background-color: #027ec6;
+      }
+      .label-spacing {
+        margin: 5px 0px 0px 5px;
+        text-align: justify;
+      }
+    }
   }
 }

@@ -1,35 +1,10 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col">
-      <nav class="navbar navbar-expand-lg navbar-light navback-color">
-        <a href="#" class="navbar-brand mx-auto">Tanzeem Ul Madaris</a>
-        <ul *ngIf="!landing" class="navbar-nav mx-auto">
-          <li><p>no navbar</p></li>
-        </ul>
-        <ul *ngIf="landing" class="navbar-nav mx-auto">
-          <li class="nav-item">
-            <a href="#" class="nav-link">Object & Objectives</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">Provincial Offices</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">Downloads</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">Results</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">Background</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">School Of Order</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">Contact Us</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </div>
+<div class="parent">
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a [routerLink]="'/'" class="navbar-brand mx-auto">Tanzeem Ul Madaris</a>
+    <ul class="navbar-nav mx-auto">
+      <li *ngFor="let item of navOptions">
+        <a (click)="navigate(item.path)" class="nav-link">{{ item.key }}</a>
+      </li>
+    </ul>
+  </nav>
 </div>

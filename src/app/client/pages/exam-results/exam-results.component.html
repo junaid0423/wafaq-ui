@@ -9,10 +9,20 @@
     <div class="button1">
       <!-- <span><i class="fa fa-circle-check"></i></span> -->
       <!-- <div class="btn">Collective Outcomes</div> -->
-      <input class="collective" type="button" value="Collective Outcomes" />
+      <input
+        class="collective"
+        type="button"
+        value="Collective Outcomes"
+        (click)="CollectiveForm()"
+      />
     </div>
     <div class="button2">
-      <input class="single" type="button" value="Individual Result" />
+      <input
+        class="single"
+        type="button"
+        value="Individual Result"
+        (click)="SingleForm()"
+      />
     </div>
   </div>
   <div class="form-div">
@@ -20,13 +30,197 @@
       <h5>Fill the following details to view the results</h5>
     </div>
     <div class="form-main">
-      <form class="form-horizontal">
-        <div class="form-group">
-          <select class="form-control" id="sel1">
+      <form *ngIf="displayName" class="form-spacing">
+        <div class="form-group form-inline">
+          <select
+            class="form-control col-md-8 col-lg-8 field-spacing"
+            id="sel1"
+          >
+            <option>Select Gender</option>
             <option>Male Student</option>
             <option>Female Student</option>
           </select>
-          <label for="sel1">:Select list</label>
+          <label class="col-md-3 col-lg-3 label-spacing" for="sel1"
+            >:Gender Selection</label
+          >
+        </div>
+
+        <div class="form-group form-inline">
+          <select
+            class="form-control col-md-4 col-lg-4 field-spacing"
+            id="sel1"
+          >
+            <option>2022</option>
+            <option>2021</option>
+            <option>2020</option>
+            <option>2019</option>
+            <option>2018</option>
+          </select>
+
+          <select
+            class="form-control col-md-4 col-lg-4 field-spacing"
+            id="sel1"
+          >
+            <option>Per Annum</option>
+          </select>
+          <label class="col-md-3 col-lg-3 label-spacing" for="sel1"
+            >:Session Selection</label
+          >
+        </div>
+
+        <div class="form-group form-inline">
+          <select
+            class="form-control col-md-8 col-lg-8 field-spacing"
+            id="sel1"
+          >
+            <option>Select Rank</option>
+            <option>Tajweed Quran</option>
+            <option>Public Firts</option>
+            <option>Public Second</option>
+            <option>Especially the first one</option>
+            <option>Especially the second one</option>
+            <option>Alia First</option>
+            <option>Alia II</option>
+            <option>World First</option>
+            <option>World II</option>
+            <option>Secondary</option>
+            <option>Specialization in Jurisprudence I</option>
+            <option>Specialization in Jurisprudence II</option>
+            <option>Specialization Entrance Test</option>
+          </select>
+          <label class="col-md-3 col-lg-3 label-spacing" for="sel1"
+            >:Selection Of Rank</label
+          >
+        </div>
+
+        <div class="form-group form-inline">
+          <input
+            type="number"
+            class="form-control col-md-8 col-lg-8"
+            placeholder="e.g: write '00005'"
+          />
+          <label class="col-md-3 col-lg-3 label-spacing" for="sel1"
+            >:Accession No</label
+          >
+        </div>
+
+        <div class="form-group form-inline">
+          <input
+            type="number"
+            class="form-control col-md-8 col-lg-8"
+            placeholder="Enter university secrete code"
+          />
+          <label class="col-md-3 col-lg-3 label-spacing" for="sel1"
+            >:Secret Code</label
+          >
+        </div>
+
+        <div class="form-group form-inline">
+          <input
+            type="submit"
+            class="btn btn-primary col-md-8 col-lg-8"
+            value="SEE THE RESULT"
+          />
+          <label class="col-md-3 col-lg-3 label-spacing" for="sel1"></label>
+        </div>
+
+        <div class="form-group form-inline">
+          <label class="col-md-11 col-lg-11 label-spacing" for="sel1"
+            >How to find results through message from any network. Tanzeem—Go to
+            Space--Roll Number and Write Message tanzeem 123456 and send it to
+            8002- E.g.
+          </label>
+        </div>
+      </form>
+      <form *ngIf="!displayName" class="form-spacing">
+        <div class="form-group form-inline">
+          <select
+            class="form-control col-md-8 col-lg-8 field-spacing"
+            id="sel1"
+          >
+            <option>Select Gender</option>
+            <option>Male Student</option>
+            <option>Female Student</option>
+          </select>
+          <label class="col-md-3 col-lg-3 label-spacing" for="sel1"
+            >:Gender Selection</label
+          >
+        </div>
+
+        <div class="form-group form-inline">
+          <select
+            class="form-control col-md-4 col-lg-4 field-spacing"
+            id="sel1"
+          >
+            <option>2022</option>
+            <option>2021</option>
+            <option>2020</option>
+            <option>2019</option>
+            <option>2018</option>
+          </select>
+
+          <select
+            class="form-control col-md-4 col-lg-4 field-spacing"
+            id="sel1"
+          >
+            <option>Per Annum</option>
+          </select>
+          <label class="col-md-3 col-lg-3 label-spacing" for="sel1"
+            >:Session Selection</label
+          >
+        </div>
+
+        <div class="form-group form-inline">
+          <select
+            class="form-control col-md-8 col-lg-8 field-spacing"
+            id="sel1"
+          >
+            <option>Select Rank</option>
+            <option>Tajweed Quran</option>
+            <option>Public Firts</option>
+            <option>Public Second</option>
+            <option>Especially the first one</option>
+            <option>Especially the second one</option>
+            <option>Alia First</option>
+            <option>Alia II</option>
+            <option>World First</option>
+            <option>World II</option>
+            <option>Secondary</option>
+            <option>Specialization in Jurisprudence I</option>
+            <option>Specialization in Jurisprudence II</option>
+            <option>Specialization Entrance Test</option>
+          </select>
+          <label class="col-md-3 col-lg-3 label-spacing" for="sel1"
+            >:Selection Of Rank</label
+          >
+        </div>
+
+        <div class="form-group form-inline">
+          <input
+            type="number"
+            class="form-control col-md-8 col-lg-8"
+            placeholder="Enter Roll Number"
+          />
+          <label class="col-md-3 col-lg-3 label-spacing" for="sel1"
+            >:Roll No</label
+          >
+        </div>
+
+        <div class="form-group form-inline">
+          <input
+            type="submit"
+            class="btn btn-primary col-md-8 col-lg-8"
+            value="SEE THE RESULT"
+          />
+          <label class="col-md-3 col-lg-3 label-spacing" for="sel1"></label>
+        </div>
+
+        <div class="form-group form-inline">
+          <label class="col-md-11 col-lg-11 label-spacing" for="sel1"
+            >How to find results through message from any network. Tanzeem—Go to
+            Space--Roll Number and Write Message tanzeem 123456 and send it to
+            8002- E.g.
+          </label>
         </div>
       </form>
     </div>
