@@ -1,6 +1,8 @@
 <div class="parent">
   <nav class="navbar navbar-expand-lg navbar-light">
-    <a [routerLink]="'/'" class="navbar-brand mx-auto">Tanzeem Ul Madaris</a>
+    <a [routerLink]="'/'" class="navbar-brand mx-auto"
+      ><img src="../../../../assets/wafaq-logo.png" width="250px" height="40px"
+    /></a>
     <ul class="navbar-nav mx-auto">
       <li *ngFor="let item of navOptions">
         <a (click)="navigate(item.path)" class="nav-link">{{ item.key }}</a>
