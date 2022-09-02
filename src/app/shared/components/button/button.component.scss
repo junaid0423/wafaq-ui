@@ -1,0 +1,61 @@
+@import "/src/assets/styles-files/utilities/variables";
+.btn {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    border-radius: 4px;
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+.btn-fill-primary {
+    background-color: $primary-blue;
+    color: $white;
+    white-space: nowrap;
+    .icon-svg {
+        margin-right: 4px;
+    }
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+.btn-fill-secondary {
+    background-color: $outline;
+    padding: 8px 16px;
+    border-radius: 4px;
+    color: $primary-blue;
+    .icon-svg {
+        margin-right: 4px;
+    }
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+.btn-outline {
+    color: $primary-blue;
+    padding: 8px 16px;
+    border: 1px solid $button-border;
+    .icon-svg {
+        margin-right: 4px;
+    }
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+.ml-10px {
+    margin-right: 10px;
+}
+
+.mr-10px {
+    margin-right: 10px;
+}
