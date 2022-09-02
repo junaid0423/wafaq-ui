@@ -1,0 +1,196 @@
+<div *ngIf="buttons?.length || tableData?.showSearch" class="search-warpper">
+  <input
+    *ngIf="tableData?.showSearch"
+    type="search"
+    [(ngModel)]="searchKey"
+    (input)="searchClick($event)"
+    placeholder="Search {{ tableData.searchPlaceholder }}..."
+    class="table-search"
+  />
+
+  <div *ngIf="buttons?.length">
+    <app-button
+      *ngFor="let button of buttons; index as i"
+      [button]="button"
+      (callBack)="buttonClick(i)"
+    ></app-button>
+  </div>
+</div>
+<table width="100%" class="table-bordered custom-table hover">
+  <thead class="table-head">
+    <tr class="table-head-row">
+      <th
+        class="th-class"
+        *ngFor="let element of tableData?.tableHeader"
+        width="{{ element.width }}"
+        [ngClass]="{
+          'text-center': element.alignCenter,
+          'cursor-pointer': element.sortable
+        }"
+        (click)="sortColumns(element)"
+      >
+        {{ element.text }}
+        <img
+          *ngIf="element.sortable"
+          [ngClass]="{
+            'rotate-180': descendingOrder
+          }"
+          src="assets/down-sort.svg"
+          alt=""
+        />
+      </th>
+      <th width="30px" *ngIf="tableData?.showDownload"></th>
+      <th width="30px" *ngIf="tableData?.showDelete"></th>
+      <th width="30px" *ngIf="tableData?.showDetails"></th>
+    </tr>
+  </thead>
+  <tbody class="table-body" *ngIf="tableData?.tableBody?.length">
+    <tr class="table-body-row" *ngFor="let row of tableData?.tableBody">
+      <td
+        *ngFor="let element of tableData?.tableHeader"
+        [ngClass]="{ 'text-center': element.alignCenter }"
+      >
+        <div *ngIf="element.type === 'text'">{{ row[element.field] }}</div>
+        <div
+          style="margin: -6px 0px"
+          *ngIf="element.type === 'heading-and-email'"
+        >
+          <h6>{{ row[element.field]?.heading }}</h6>
+          <label class="h6-email">{{ row[element.field]?.email }}</label>
+        </div>
+        <div *ngIf="element.type === 'number'">
+          {{ row[element.field] | number }}
+        </div>
+        <div *ngIf="element.type === 'tag'">
+          <span class="inner-tag">{{ row[element.field] }}</span>
+        </div>
+        <div
+          class="white-space-nowrap"
+          [ngStyle]="{
+            width: element.width ? element.width : 'auto'
+          }"
+          *ngIf="element.type === 'tag-array'"
+        >
+          <span class="inner-tag" *ngFor="let item of row[element.field]">{{
+            item[element.field]
+          }}</span>
+        </div>
+        <div *ngIf="element.type === 'date'">{{ row[element.field] }}</div>
+        <div *ngIf="element.type === 'status'">
+          <span
+            [ngStyle]="{
+              width: element.width ? element.width : 'auto'
+            }"
+            class="bridge bridge-{{ row[element.field].type }}"
+            >{{ row[element.field].text }}</span
+          >
+        </div>
+      </td>
+      <td *ngIf="tableData?.showDownload">
+        <img
+          *ngIf="row.showDownload"
+          style="cursor: pointer"
+          (click)="tableClick(appConstants.DOWNLOAD, row)"
+          src="assets/download-icon.svg"
+          alt=""
+        />
+      </td>
+      <td *ngIf="tableData?.showDelete">
+        <div class="audience-icons">
+          <img
+            *ngIf="tableData?.showDelete"
+            class="cursor-pointer"
+            (click)="tableClick(appConstants.DELETE, row)"
+            src="assets/delete.svg"
+            alt=""
+          />
+        </div>
+      </td>
+      <td *ngIf="tableData?.showDetails">
+        <img
+          [ngClass]="row.status?.disabled ? 'disable' : 'cursor-pointer'"
+          (click)="tableClick(appConstants.EDIT, row)"
+          src="assets/create.svg"
+          alt=""
+        />
+      </td>
+    </tr>
+  </tbody>
+  <tbody *ngIf="!tableData?.tableBody?.length" class="table-body">
+    <tr>
+      <td
+        [attr.colspan]="tableData.tableHeader.length"
+        class="no-data-available"
+      >
+        No data Available!
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Custom Pagination -->
+
+<div *ngIf="pagination?.total" class="row">
+  <div class="col-sm-12 col-md-5">
+    <div
+      class="dataTables_info"
+      id="DataTables_Table_0_info"
+      role="status"
+      aria-live="polite"
+    >
+      <span
+        >Displaying
+        <strong class="showpages">{{
+          tableData.tableBody.length | number
+        }}</strong>
+        out of <strong>{{ pagination?.total | number }}</strong></span
+      >
+    </div>
+  </div>
+  <div class="col-sm-12 col-md-7 d-flex justify-content-end">
+    <div
+      class="dataTables_paginate paging_simple"
+      id="DataTables_Table_0_paginate"
+    >
+      <label
+        >{{ pagination?.start | number }} -
+        {{
+          (pagination?.total / pagination?.count < 1
+            ? 1
+            : math.ceil(pagination?.total / pagination?.count)
+          ) | number
+        }}</label
+      >
+      <ul *ngIf="pagination" class="pagination">
+        <li
+          class="paginate_button page-item previous"
+          [ngClass]="{
+            disabled: pagination?.start === 1
+          }"
+        >
+          <button (click)="paginateTable(false)" class="page-link">
+            <img
+              class="pg-left-icon"
+              src="assets/pg-r.svg"
+              aria-hidden="true"
+            />
+          </button>
+        </li>
+        <li
+          class="paginate_button page-item next"
+          [ngClass]="{
+            disabled: pagination?.count * pagination?.start >= pagination?.total
+          }"
+        >
+          <button (click)="paginateTable(true)" class="page-link">
+            <img
+              class="pg-righ-icon"
+              src="assets/pg-r.svg"
+              aria-hidden="true"
+            />
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

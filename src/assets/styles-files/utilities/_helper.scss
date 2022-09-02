@@ -1,0 +1,248 @@
+@import "./variables";
+@import "./screens";
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0px;
+    padding: 0px;
+}
+
+p {
+    margin: 0px;
+    padding: 0px;
+}
+
+i {
+    cursor: pointer;
+}
+
+
+/*------------------------------------------------
+                button
+------------------------------------------------*/
+
+.btn {
+    font-weight: 500 !important;
+    font-size: 14px !important;
+    line-height: 24px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    padding: 7px 16px !important;
+    border-radius: 4px !important;
+    text-shadow: none !important;
+}
+
+.btn-fill-primary {
+    background-color: $primary-blue !important;
+    color: $white !important;
+    .icon-svg {
+        margin-right: 4px;
+    }
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+.btn-fill-secondary {
+    background-color: $outline !important;
+    padding: 8px 16px;
+    border-radius: 4px;
+    color: $primary-blue !important;
+    .icon-svg {
+        margin-right: 4px;
+    }
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+.btn-outline {
+    color: $primary-blue;
+    padding: 8px 16px;
+    border: 1px solid $button-border;
+    .icon-svg {
+        margin-right: 4px;
+    }
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+
+/*------------------------------------------------
+                checkbox
+------------------------------------------------*/
+
+.custom-check-orange {
+    position: relative;
+    margin: 0 0 10px;
+    .styled-checkbox {
+        position: absolute; // take it out of document flow
+        opacity: 0; // hide it
+        &+label {
+            position: relative;
+            cursor: pointer;
+            padding: 0;
+            color: $gray-text;
+            display: flex;
+            align-items: center;
+        }
+        // Box.
+        &+label:before {
+            content: "";
+            margin-right: 10px;
+            display: inline-block;
+            vertical-align: text-top;
+            width: 16px;
+            height: 16px;
+            background: #fff;
+            border: 1px solid $gray-text;
+            border-radius: 4px;
+            position: relative;
+            z-index: 9;
+            font-family: inherit;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 15px;
+            color: #3671ef;
+        }
+        // Box hover
+        &:hover+label:before {
+            background: transparent;
+        }
+        // Box checked
+        &:checked+label:before {
+            background: transparent;
+            color: $gray-text;
+        }
+        // Disabled state label.
+        &:disabled+label {
+            color: #b8b8b8;
+            cursor: auto;
+        }
+        // Disabled box.
+        &:disabled+label:before {
+            box-shadow: none;
+            background: #ddd;
+        }
+        &:checked+label {
+            background: transparent;
+            color: $gray-text !important;
+        }
+        // Checkmark. Could be replaced with an image
+        &:checked+label:after {
+            content: "";
+            background: url("../../Tick-blue.svg") transparent no-repeat center;
+            position: absolute;
+            left: 0px;
+            top: 50%;
+            width: 16px;
+            height: 16px;
+            z-index: 99;
+            border-radius: 4px;
+            transform: translateY(-50%);
+        }
+        &:checked+label:before {
+            border-color: #3671ef;
+        }
+    }
+}
+
+.form-check-input:checked[type="radio"] {
+    background-image: url("../../../assets/Radio.svg") !important;
+}
+
+.form-check-input:focus {
+    border-color: transparent !important;
+    outline: 0;
+    box-shadow: none !important;
+}
+
+// scroll
+::-webkit-scrollbar {
+    width: 5px;
+    height: 0.1px;
+    border-radius: 16px;
+}
+
+::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $black;
+    border: 0px none #ffffff;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #525965;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: $black;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: $black;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+    border: 0px none #ffffff;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-track:hover {
+    background: transparent;
+}
+
+::-webkit-scrollbar-track:active {
+    background: transparent;
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent;
+}

@@ -1,0 +1,19 @@
+<!-- 
+  btn-fill-primary
+  btn-fill-secondary 
+  btn-outline
+ -->
+<button
+  class="btn btn-{{ button.type }} {{ button.class }}"
+  [disabled]="disabled"
+  type="button"
+  (click)="fire()"
+>
+  <img
+    *ngIf="button?.icon"
+    class="icon-svg"
+    src="{{ 'assets/' + button.icon }}"
+    alt=""
+  />
+  {{ button.text }}
+</button>
