@@ -180,10 +180,15 @@ section {
     }
   }
   .objective-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 474px;
     height: 432px;
+    background-color: #02b2c2;
+    border-radius: 8px;
     img {
-      border-radius: 8px;
+      height: 400px;
     }
   }
 }
