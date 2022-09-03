@@ -10,6 +10,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { TableComponent } from './components/table/table.component';
 import { ButtonComponent } from './components/button/button.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [
@@ -18,8 +19,14 @@ import { ButtonComponent } from './components/button/button.component';
     TableComponent,
     ButtonComponent,
   ],
-  imports: [CommonModule, SharedRoutingModule],
-  exports: [NavbarComponent, FooterComponent, TableComponent, ButtonComponent],
+  imports: [CommonModule, SharedRoutingModule, TranslateModule],
+  exports: [
+    NavbarComponent,
+    FooterComponent,
+    TableComponent,
+    ButtonComponent,
+    TranslateModule,
+  ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
 })
 export class SharedModule {}

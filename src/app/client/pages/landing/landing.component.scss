@@ -280,3 +280,11 @@ section {
 .icon3 {
   margin: 05px 05px 05px 0px;
 }
+.p-carousel-item {
+  display: flex;
+  align-items: center;
+  img {
+    width: 250px;
+    margin: 5px;
+  }
+}

@@ -4,22 +4,13 @@
     <div class="carousel slide" data-ride="carousel" id="mycarousel">
       <div class="carousel-inner">
         <div class="carousel-item active" data-interval="2500">
-          <img
-            src="../../../../assets/mosque1.png"
-            class="d-block w-100 h-100"
-          />
+          <img src="assets/mosque1.png" class="d-block w-100 h-100" />
         </div>
         <div class="carousel-item" data-interval="2500">
-          <img
-            src="../../../../assets/mosque3.png"
-            class="d-block w-100 h-100"
-          />
+          <img src="assets/mosque3.png" class="d-block w-100 h-100" />
         </div>
         <div class="carousel-item" data-interval="2500">
-          <img
-            src="../../../../assets/mosque2.png"
-            class="d-block w-100 h-100"
-          />
+          <img src="assets/mosque2.png" class="d-block w-100 h-100" />
         </div>
         <ul class="carousel-indicators">
           <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
@@ -36,8 +27,8 @@
     </div>
     <div class="notifi-bar-inner">
       <p>
-        <span class="m-2 far fa-hand-point-right"></span>Lorem, ipsum dolor sit
-        amet consectetur adipisicing elit. Eius, provident?
+        <span class="m-2 far fa-hand-point-right"></span
+        >{{ "TITLE" | translate }}
       </p>
     </div>
   </section>
@@ -47,7 +38,7 @@
   <section class="notification-section container">
     <div class="single-notification-box box1-color">
       <div class="box1">
-        <h4>Notifications</h4>
+        <h4>{{ "LANDING.NOTIFICATIONS" | translate }}</h4>
         <div class="inner-box1" *ngFor="let item of notifications">
           <span class="far fa-hand-point-right m-2"></span>
           <p>{{ item }}</p>
@@ -56,7 +47,7 @@
     </div>
     <div class="single-notification-box box2-color">
       <div class="box2">
-        <h4>Quick Links</h4>
+        <h4>{{ "LANDING.LINKS" | translate }}</h4>
         <div class="inner-box2" *ngFor="let item of quickLinks">
           <a>{{ item }}</a>
           <hr />
@@ -68,17 +59,19 @@
 
   <!-- our provincial Office section starts here -->
   <section id="offices" class="provincial-offices-section flex-column">
-    <h2>Our Provincial Offices</h2>
+    <h2>{{ "LANDING.OUR_OFFICES" | translate }}</h2>
     <div class="carousel slide" data-ride="carousel" id="Provincialcarousel">
       <div class="carousel-inner">
-        <div class="carousel-item active" data-interval="2500">
-          <img src="../../../../assets/POB.png" class="d-block" />
+        <div class="carousel-item p-carousel-item active" data-interval="2500">
+          <img src="assets/offices/اسلام آباد-1.jpg" class="d-block" />
+          <img src="assets/offices/شمالی پنجاب-2.jpg" class="d-block" />
+          <img src="assets/offices/جنوبی پجاب-3.jpg" class="d-block" />
+          <img src="assets/offices/سندھ-4.jpg" class="d-block" />
         </div>
-        <div class="carousel-item" data-interval="2500">
-          <img src="../../../../assets/POB.png" class="d-block" />
-        </div>
-        <div class="carousel-item" data-interval="2500">
-          <img src="../../../../assets/POB.png" class="d-block" />
+        <div class="carousel-item p-carousel-item" data-interval="2500">
+          <img src="assets/offices/بلوچستان-5.jpg" class="d-block" />
+          <img src="assets/offices/خیبرپختونخواہ-6.jpg" class="d-block" />
+          <img src="assets/offices/کشمیر-7.jpg" class="d-block" />
         </div>
         <ul class="carousel-indicators">
           <li
@@ -92,11 +85,6 @@
             data-target="#Provincialcarousel"
             data-slide-to="1"
           ></li>
-          <li
-            class="clr"
-            data-target="#Provincialcarousel"
-            data-slide-to="2"
-          ></li>
         </ul>
       </div>
     </div>
@@ -105,7 +93,7 @@
 
   <!-- Other page section starts here-->
   <section class="other-page-section flex-column">
-    <h2>Other Pages</h2>
+    <h2>{{ "LANDING.PAGES" | translate }}</h2>
     <div class="box-area">
       <div class="single-box" *ngFor="let item of navOptions">
         <div class="img-area bg-color1">
@@ -113,7 +101,7 @@
         </div>
         <div class="img-text">
           <span class="header-text"
-            ><strong>{{ item.key }}</strong></span
+            ><strong>{{ item.key | translate }}</strong></span
           >
         </div>
       </div>
@@ -124,7 +112,7 @@
   <!-- Rules and Regulation Section starts here -->
   <section class="rules-regulation flex-column">
     <div class="rules-img"></div>
-    <h2>Rules and Regulation</h2>
+    <h2>{{ "LANDING.RULES" | translate }}</h2>
     <div class="carousel slide" data-ride="carousel" id="textcarousel">
       <div class="container">
         <div class="carousel-inner">
@@ -207,7 +195,7 @@
   <section id="objectives">
     <div class="container objectives-section">
       <div class="objective-text">
-        <h4>Objective & Objectives</h4>
+        <h4>{{ "LANDING.OBJECTIVES" | translate }}</h4>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
           inventore repellendus incidunt consequuntur! Vitae tempora sit
@@ -223,7 +211,7 @@
         ></a>
       </div>
       <div class="objective-img">
-        <img src="../../../../assets/logo.png" />
+        <img src="assets/logo.png" />
       </div>
     </div>
   </section>
@@ -231,7 +219,7 @@
 
   <!-- Historical Background section starts here -->
   <section id="background" class="historical-section flex-column">
-    <h2>Historical Background and Services</h2>
+    <h2>{{ "LANDING.BG" | translate }}</h2>
     <div class="historical-background">
       <div class="carousel slide" data-ride="carousel" id="historycarousel">
         <div class="container carousel-inner">
@@ -333,18 +321,18 @@
     <div class="container sub-inner-section">
       <div class="sub-inner-box1">
         <div class="inner-box1-content">
-          <h2>Subscribe To Be in Touch</h2>
+          <h2>{{ "LANDING.SUBSCRIBE_TITLE" | translate }}</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
-            quidem, magni veritatis vitae quibusdam porro nesciunt temporibus
-            numquam obcaecati officia!
+            {{ "LANDING.SUBSCRIBE_TEXT" | translate }}
           </p>
-          <input class="btn sub-btn" type="submit" value="Subscribe Now" />
+          <button class="btn sub-btn">
+            {{ "LANDING.SUBSCRIBE_NOW" | translate }}
+          </button>
         </div>
       </div>
       <div class="sub-inner-box2">
         <div class="sub-img">
-          <img src="../../../../assets/subscribe-section-image.JPG" />
+          <img src="assets/subscribe-section-image.JPG" />
         </div>
       </div>
     </div>
@@ -355,7 +343,7 @@
   <section id="contact-us" class="contact-section">
     <div class="container contact-innerbox">
       <div class="innerbox1">
-        <h2>Contact Us</h2>
+        <h2>{{ "LANDING.CONTACT_US" | translate }}</h2>
         <p>
           We are committed to processing the information in order to contact you
           and talk about your project.
@@ -414,7 +402,9 @@
               name="Descrp"
             />
           </div>
-          <button type="submit" class="btn btn-success">Submit</button>
+          <button type="submit" class="btn btn-success">
+            {{ "LANDING.OUR_OFFICES" | translate }}
+          </button>
         </form>
       </div>
     </div>

@@ -7,7 +7,8 @@ import { Navigations } from 'src/app/shared/utils/navigations';
   styleUrls: ['./landing.component.scss'],
 })
 export class LandingComponent implements OnInit {
-  navOptions: any = Navigations.landingNav;
+  navOptions: any = Navigations.landingNav.reverse();
+
   notifications: any = [
     'Lorem ipsum dolor sit amet consectetur adipisicing.',
     'Lorem ipsum dolor sit amet consectetur adipisicing.',

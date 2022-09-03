@@ -1,27 +1,27 @@
 export class Navigations {
   public static landingNav = [
     {
-      key: 'Objectives',
+      key: 'LANDING.OBJECTIVES',
       path: 'objectives',
       icon: 'fa-light fa-file-alt',
     },
     {
-      key: 'Provincial Offices',
+      key: 'LANDING.OFFICES',
       path: 'offices',
       icon: 'fa-file-alt',
     },
     {
-      key: 'Downloads',
+      key: 'LANDING.DOWNLOADS',
       path: '/c/downloads',
       icon: 'fa-file-alt',
     },
     {
-      key: 'Results',
+      key: 'LANDING.RESULTS',
       path: '/c/exam-results',
       icon: 'fa-file-alt',
     },
     {
-      key: 'Background',
+      key: 'LANDING.BACKGROUND',
       path: 'background',
       icon: 'fa-file-alt',
     },
@@ -31,7 +31,7 @@ export class Navigations {
     //   icon: 'fa-file-alt',
     // },
     {
-      key: 'Contact Us',
+      key: 'LANDING.CONTACT',
       path: 'contact-us',
       icon: 'fa-file-alt',
     },
