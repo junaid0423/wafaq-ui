@@ -26,10 +26,8 @@
       </a>
     </div>
     <div class="notifi-bar-inner">
-      <p>
-        <span class="m-2 far fa-hand-point-right"></span
-        >{{ "TITLE" | translate }}
-      </p>
+      <span class="m-2 far fa-hand-point-right"></span>
+      <p id="movetxt">{{ mainNotification }}</p>
     </div>
   </section>
   <!-- Homepage Slider ends here-->
@@ -110,7 +108,7 @@
   <!-- Other page section ends here-->
 
   <!-- Rules and Regulation Section starts here -->
-  <section class="rules-regulation flex-column">
+  <!-- <section class="rules-regulation flex-column">
     <div class="rules-img"></div>
     <h2>{{ "LANDING.RULES" | translate }}</h2>
     <div class="carousel slide" data-ride="carousel" id="textcarousel">
@@ -188,108 +186,30 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
   <!-- Rules and Regulation ends here -->
-
-  <!-- Objectives & Objectives starts here -->
-  <section id="objectives">
-    <div class="container objectives-section">
-      <div class="objective-text">
-        <h4>{{ "LANDING.OBJECTIVES" | translate }}</h4>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
-          inventore repellendus incidunt consequuntur! Vitae tempora sit
-          voluptatibus magnam, accusantium nulla, sapiente inventore repellat
-          commodi pariatur, ducimus repudiandae at? Minus, impedit dignissimos
-          libero eum voluptate, ullam accusantium aliquid mollitia maxime, amet
-          temporibus. Ex dolorum, reprehenderit praesentium mollitia quos
-          consectetur earum blanditiis.
-        </p>
-        <a href="#"
-          >Read More
-          <span class="fas fa-long-arrow-alt-right arrow-setting"></span
-        ></a>
-      </div>
-      <div class="objective-img">
-        <img src="assets/logo.png" />
-      </div>
-    </div>
-  </section>
-  <!-- Objectives & Objectives ends here -->
-
+  
   <!-- Historical Background section starts here -->
   <section id="background" class="historical-section flex-column">
+    <div class="bg-img"></div>
     <h2>{{ "LANDING.BG" | translate }}</h2>
     <div class="historical-background">
       <div class="carousel slide" data-ride="carousel" id="historycarousel">
         <div class="container carousel-inner">
-          <div class="carousel-item active" data-interval="2500">
+          <div
+            *ngFor="let item of backgroundAndHistory"
+            class="carousel-item active"
+            data-interval="2500"
+          >
             <div class="historical-text-mar">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Exercitationem fugiat, expedita nostrum laboriosam aspernatur
-                veniam hic nesciunt nisi asperiores officiis incidunt rem
-                reiciendis. Cum quam soluta ut optio libero repudiandae
-                accusantium saepe quibusdam adipisci quo molestias magnam
-                maiores ipsam cupiditate provident, necessitatibus animi earum
-                commodi quidem cumque. Perspiciatis voluptatibus dolorem, cum
-                officiis fugiat incidunt animi, fuga omnis reprehenderit impedit
-                cumque non placeat repellat voluptatem excepturi veniam
-                aspernatur expedita, nulla vero fuga omnis reprehenderit impedit
-                cumque non placeat repellat voluptatem excepturi veniam
-                aspernatur expedita, nulla.
+                {{ item }}
               </p>
-              <div class="set">
+              <!-- <div class="set">
                 <a href="#"
                   >Read More <span class="fas fa-long-arrow-alt-right"></span
                 ></a>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item" data-interval="2500">
-            <div class="historical-text-mar">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Exercitationem fugiat, expedita nostrum laboriosam aspernatur
-                veniam hic nesciunt nisi asperiores officiis incidunt rem
-                reiciendis. Cum quam soluta ut optio libero repudiandae
-                accusantium saepe quibusdam adipisci quo molestias magnam
-                maiores ipsam cupiditate provident, necessitatibus animi earum
-                commodi quidem cumque. Perspiciatis voluptatibus dolorem, cum
-                officiis fugiat incidunt animi, fuga omnis reprehenderit impedit
-                cumque non placeat repellat voluptatem excepturi veniam
-                aspernatur expedita, nulla vero fuga omnis reprehenderit impedit
-                cumque non placeat repellat voluptatem excepturi veniam
-                aspernatur expedita, nulla.
-              </p>
-              <div class="set">
-                <a href="#"
-                  >Read More <span class="fas fa-long-arrow-alt-right"></span
-                ></a>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item" data-interval="2500">
-            <div class="historical-text-mar">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Exercitationem fugiat, expedita nostrum laboriosam aspernatur
-                veniam hic nesciunt nisi asperiores officiis incidunt rem
-                reiciendis. Cum quam soluta ut optio libero repudiandae
-                accusantium saepe quibusdam adipisci quo molestias magnam
-                maiores ipsam cupiditate provident, necessitatibus animi earum
-                commodi quidem cumque. Perspiciatis voluptatibus dolorem, cum
-                officiis fugiat incidunt animi, fuga omnis reprehenderit impedit
-                cumque non placeat repellat voluptatem excepturi veniam
-                aspernatur expedita, nulla fuga omnis reprehenderit impedit
-                cumque non placeat repellat voluptatem excepturi veniam
-                aspernatur expedita, nulla.
-              </p>
-              <div class="set">
-                <a href="#"
-                  >Read More <span class="fas fa-long-arrow-alt-right"></span
-                ></a>
-              </div>
+              </div> -->
             </div>
           </div>
           <a
@@ -315,6 +235,26 @@
     </div>
   </section>
   <!-- Historical Background section ends here -->
+
+  <!-- Objectives & Objectives starts here -->
+  <section id="objectives">
+    <div class="container objectives-section">
+      <div class="objective-text">
+        <h4>{{ "LANDING.OBJECTIVES" | translate }}</h4>
+        <p *ngFor="let item of objectives">
+          {{ item }}
+        </p>
+        <a href="#"
+          >Read More
+          <span class="fas fa-long-arrow-alt-right arrow-setting"></span
+        ></a>
+      </div>
+      <div class="objective-img">
+        <img src="assets/logo.png" />
+      </div>
+    </div>
+  </section>
+  <!-- Objectives & Objectives ends here -->
 
   <!-- Subscribe section starts here -->
   <section class="sub-section">
