@@ -1,0 +1,13 @@
+<div class="parent">
+  <div class="container objectives-section">
+    <div class="mb-5 d-flex justify-content-around">
+      <img src="assets/logo.png" />
+    </div>
+    <div class="objective-text">
+      <h3 class="mb-3">{{ "LANDING.OBJECTIVES" | translate }}</h3>
+      <p *ngFor="let item of objectives">
+        {{ item }} -
+      </p>
+    </div>
+  </div>
+</div>

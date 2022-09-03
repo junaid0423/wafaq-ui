@@ -188,7 +188,7 @@
     </div>
   </section> -->
   <!-- Rules and Regulation ends here -->
-  
+
   <!-- Historical Background section starts here -->
   <section id="background" class="historical-section flex-column">
     <div class="bg-img"></div>
@@ -244,7 +244,7 @@
         <p *ngFor="let item of objectives">
           {{ item }}
         </p>
-        <a href="#"
+        <a [routerLink]="'/c/objectives'"
           >Read More
           <span class="fas fa-long-arrow-alt-right arrow-setting"></span
         ></a>
@@ -350,8 +350,4 @@
     </div>
   </section>
   <!-- contact section ends here -->
-
-  <!-- Footer section starts here -->
-  <app-footer></app-footer>
-  <!-- Footer section ends here -->
 </div>

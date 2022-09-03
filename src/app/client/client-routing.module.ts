@@ -4,6 +4,7 @@ import { ClientComponent } from './client.component';
 import { DownloadsComponent } from './pages/downloads/downloads.component';
 import { ExamResultsComponent } from './pages/exam-results/exam-results.component';
 import { LandingComponent } from './pages/landing/landing.component';
+import { ObjectiveComponent } from './pages/objective/objective.component';
 
 const routes: Routes = [
   {
@@ -27,6 +28,10 @@ const routes: Routes = [
       {
         path: 'exam-results',
         component: ExamResultsComponent,
+      },
+      {
+        path: 'objectives',
+        component: ObjectiveComponent,
       },
     ],
   },
