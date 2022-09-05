@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Navigations } from 'src/app/shared/utils/navigations';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-landing',
@@ -47,14 +48,57 @@ export class LandingComponent implements OnInit {
     'بعض مدارس کے منتظمین رول نمبر سلپس وصول ہونے کے ساتھ ہی امیدواروں میں تقسیم کرنے کی بجائے امتحان شروع ہونے پر (آخری دن) تقسیم کرتے ہیں ۔ کیونکہ طلبہ و طالبات اپنی رول نمبر سلپ سنبھال کر نہیں رکھتے ، لہٰذا حفاظتی نقطہ نگاہ سے ایسا کیا جاتا ہے ۔ مشورہ دیا جاتا ہے کہ رول نمبر سلپ وصول ہوتے ہی امیدوار کو جاری کی جائے اور اسے اس کے مندرجات پڑھنے ، چیک کرنےاور ہدایات کو سمجھنے کے ساتھ ساتھ سنبھال کر رکھنے کی تاکید وہدایت کی جائے ۔ البتہ حفظ ماتقدم کے طور پر اس کی فوٹو کاپی کر کے امیدوار کے پاس بھی الگ سے محفوظ رکھنے کا کہا جائے اور دفتری ریکارڈ کے لئے بھی فوٹو کاپی کروا کر محفوظ کر لی جائے تاکہ بوقت ضرورت کام میں لائی جا سکے ۔ شعبہ تعلقات عامہ وفاق المدارس الاسلامیہ الرضویہ پاکستان',
   ];
   quickLinks: any = [
-    'Lorem ipsum dolor sit amet consectetur adipisicing.',
-    'Lorem ipsum dolor sit amet consectetur adipisicing.',
-    'Lorem ipsum dolor sit amet consectetur adipisicing.',
-    'Lorem ipsum dolor sit amet consectetur adipisicing.',
-    'Lorem ipsum dolor sit amet consectetur adipisicing.',
-    'Lorem ipsum dolor sit amet consectetur adipisicing.',
+    {
+      name: 'داخلہ فارم برائے طالبات (درجہ متوسطہ تاتخصص  )بابت سالانہ ضمنی امتحان',
+      path: 'assetsdownloadsexamination-downloadsTalbat Admisstion Form.pdf',
+    },
+    {
+      name: 'داخلہ فارم برائےطلبہ (درجہ متوسطہ تا تخصص )بابت سالانہ ضمنی امتحان',
+      path: 'assetsdownloadsexamination-downloadsTulba Admisstion Form.pdf',
+    },
+    {
+      name: 'پروفارمہ بابت امتحانات زیر تکمیل حفظ القرآن طلبہ و طالبات',
+      path: 'assetsdownloadsexamination-downloadsپروفارمہ بابت امتحانات زیر تکمیل حفظ القرآن طلبہ و طالبات.pdf',
+    },
+    {
+      name: 'پروفارمہ بابت امتحانات زیر تکمیل تجوید و قرأت طلبہ و طالبات',
+      path: 'assetsdownloadsexamination-downloadsپروفارمہ بابت امتحانات زیر تکمیل تجوید قرآت طلبہ و طالبات.pdf',
+    },
+    {
+      name: 'داخلہ فارم تحفیظ القرآن',
+      path: 'assetsdownloadsexamination-downloadsتحفیظ القرآن.pdf',
+    },
+    {
+      name: 'داخلہ فارم تجوید و قرأت',
+      path: 'assetsdownloadsexamination-downloadsتجوید وقرأت.pdf',
+    },
+    {
+      name: 'نظام الاوقات وصولی داخلہ فارم بابت سالانہ امتحانات 2023ء برائے طالبات',
+      path: 'assetsdownloadsexamination-downloadsنظام الاوقات سالانہ امتحانات 2023ء.jpg',
+    },
   ];
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
+  navigate(route: string) {
+    if (
+      route === 'objectives' ||
+      route === 'offices' ||
+      route === 'background' ||
+      route === 'contact-us'
+    ) {
+      if (this.router.url.slice(3) !== 'landing') {
+        this.router.navigate(['/']);
+      }
+      this.scroll(route);
+    } else {
+      this.router.navigate([route]);
+    }
+  }
+  scroll(el: string) {
+    const ele: HTMLElement = document.getElementById(el) as HTMLElement;
+    setTimeout(() => {
+      ele.scrollIntoView({ behavior: 'smooth' });
+    }, 0);
+  }
 }

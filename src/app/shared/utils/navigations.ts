@@ -8,22 +8,22 @@ export class Navigations {
     {
       key: 'LANDING.OFFICES',
       path: 'offices',
-      icon: 'fa-file-alt',
+      icon: 'fa-regular fa-building',
     },
     {
       key: 'LANDING.DOWNLOADS',
       path: '/c/downloads',
-      icon: 'fa-file-alt',
+      icon: 'fa fa-download',
     },
     {
       key: 'LANDING.RESULTS',
       path: '/c/exam-results',
-      icon: 'fa-file-alt',
+      icon: 'fa fa-award',
     },
     {
       key: 'LANDING.BACKGROUND',
       path: 'background',
-      icon: 'fa-file-alt',
+      icon: 'fa fa-clock-rotate-left',
     },
     // {
     //   key: 'School Of Order',
@@ -33,7 +33,7 @@ export class Navigations {
     {
       key: 'LANDING.CONTACT',
       path: 'contact-us',
-      icon: 'fa-file-alt',
+      icon: 'fa fa-phone',
     },
   ];
 }

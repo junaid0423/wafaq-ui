@@ -4,13 +4,13 @@
     <div class="carousel slide" data-ride="carousel" id="mycarousel">
       <div class="carousel-inner">
         <div class="carousel-item active" data-interval="2500">
-          <img src="assets/mosque1.png" class="d-block w-100 h-100" />
+          <img src="assets/slider-image1.png" class="d-block w-100 h-100" />
         </div>
         <div class="carousel-item" data-interval="2500">
-          <img src="assets/mosque3.png" class="d-block w-100 h-100" />
+          <img src="assets/slider-image2.png" class="d-block w-100 h-100" />
         </div>
         <div class="carousel-item" data-interval="2500">
-          <img src="assets/mosque2.png" class="d-block w-100 h-100" />
+          <img src="assets/slider-image3.png" class="d-block w-100 h-100" />
         </div>
         <ul class="carousel-indicators">
           <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
@@ -47,7 +47,7 @@
       <div class="box2">
         <h4>{{ "LANDING.LINKS" | translate }}</h4>
         <div class="inner-box2" *ngFor="let item of quickLinks">
-          <a>{{ item }}</a>
+          <a href="item.path" download>{{ item.name }}</a>
           <hr />
         </div>
       </div>
@@ -56,44 +56,68 @@
   <!-- Notification Section ends here -->
 
   <!-- our provincial Office section starts here -->
-  <section id="offices" class="provincial-offices-section flex-column">
-    <h2>{{ "LANDING.OUR_OFFICES" | translate }}</h2>
-    <div class="carousel slide" data-ride="carousel" id="Provincialcarousel">
+  <section id="offices" class="provincial-offices-section">
+    <div class="office-div1">
+      <h2>{{ "LANDING.OUR_OFFICES" | translate }}</h2>
+    </div>
+    <div class="carousel slide" data-ride="carousel" id="provincialcarousel">
       <div class="carousel-inner">
         <div class="carousel-item p-carousel-item active" data-interval="2500">
-          <img src="assets/offices/اسلام آباد-1.jpg" class="d-block" />
-          <img src="assets/offices/شمالی پنجاب-2.jpg" class="d-block" />
-          <img src="assets/offices/جنوبی پجاب-3.jpg" class="d-block" />
-          <img src="assets/offices/سندھ-4.jpg" class="d-block" />
+          <img
+            src="assets/offices/اسلام آباد-1.jpg"
+            class="d-block"
+            width="250px"
+          />
+          <img
+            src="assets/offices/شمالی پنجاب-2.jpg"
+            class="d-block"
+            width="250px"
+          />
+          <img
+            src="assets/offices/جنوبی پجاب-3.jpg"
+            class="d-block"
+            width="250px"
+          />
+          <img src="assets/offices/سندھ-4.jpg" class="d-block" width="250px" />
         </div>
+
         <div class="carousel-item p-carousel-item" data-interval="2500">
-          <img src="assets/offices/بلوچستان-5.jpg" class="d-block" />
-          <img src="assets/offices/خیبرپختونخواہ-6.jpg" class="d-block" />
-          <img src="assets/offices/کشمیر-7.jpg" class="d-block" />
+          <img
+            src="assets/offices/بلوچستان-5.jpg"
+            class="d-block"
+            width="250px"
+          />
+          <img
+            src="assets/offices/خیبرپختونخواہ-6.jpg"
+            class="d-block"
+            width="250px"
+          />
+          <img src="assets/offices/کشمیر-7.jpg" class="d-block" width="250px" />
         </div>
-        <ul class="carousel-indicators">
-          <li
-            class="clr"
-            data-target="#Provincialcarousel"
-            data-slide-to="0"
-            class="active"
-          ></li>
-          <li
-            class="clr"
-            data-target="#Provincialcarousel"
-            data-slide-to="1"
-          ></li>
-        </ul>
       </div>
     </div>
+    <ul class="carousel-indicators">
+      <li
+        class="clr"
+        data-target="#provincialcarousel"
+        data-slide-to="0"
+        class="active"
+      ></li>
+      <li class="clr" data-target="#provincialcarousel" data-slide-to="1"></li>
+    </ul>
   </section>
+
   <!-- our provincial Office section ends here -->
 
   <!-- Other page section starts here-->
   <section class="other-page-section flex-column">
     <h2>{{ "LANDING.PAGES" | translate }}</h2>
     <div class="box-area">
-      <div class="single-box" *ngFor="let item of navOptions">
+      <div
+        class="single-box"
+        (click)="navigate(item.path)"
+        *ngFor="let item of navOptions"
+      >
         <div class="img-area bg-color1">
           <span class="far {{ item.icon }} icon-size"></span>
         </div>
@@ -188,7 +212,7 @@
     </div>
   </section> -->
   <!-- Rules and Regulation ends here -->
-  
+
   <!-- Historical Background section starts here -->
   <section id="background" class="historical-section flex-column">
     <div class="bg-img"></div>
@@ -265,9 +289,21 @@
           <p>
             {{ "LANDING.SUBSCRIBE_TEXT" | translate }}
           </p>
-          <button class="btn sub-btn">
-            {{ "LANDING.SUBSCRIBE_NOW" | translate }}
-          </button>
+          <form>
+            <div class="form-group">
+              <input
+                style="width: 80%"
+                class="form-control"
+                type="email"
+                placeholder="ای میل لکھیں"
+              />
+            </div>
+            <div class="form-group">
+              <button class="btn sub-btn">
+                {{ "LANDING.SUBSCRIBE_NOW" | translate }}
+              </button>
+            </div>
+          </form>
         </div>
       </div>
       <div class="sub-inner-box2">
@@ -285,32 +321,25 @@
       <div class="innerbox1">
         <h2>{{ "LANDING.CONTACT_US" | translate }}</h2>
         <p>
-          We are committed to processing the information in order to contact you
-          and talk about your project.
+          {{ "LANDING.CONTACT_TEXT" | translate }}
         </p>
         <div class="icon3">
-          <span><i class="fas fa-mobile-alt"></i> +92 324 4345455</span>
+          <span><i class="fas fa-mobile-alt"></i> +92 324 4135328</span>
         </div>
         <div class="icon1">
-          <span><i class="far fa-envelope"></i> example@payload.com</span>
+          <span
+            ><i class="far fa-envelope"></i> wafaqulmadarisalrizvia.com</span
+          >
         </div>
         <div class="icon2">
           <span
-            ><i class="fas fa-map-marker-alt"></i> Tanzeem Ul Madaris, Lahore
-            Pakistan</span
+            ><i class="fas fa-map-marker-alt"></i> Wafaq Ul Madaris Al Islamia
+            Al Rizvia, Lahore Pakistan</span
           >
         </div>
       </div>
       <div class="innerbox2">
         <form>
-          <div class="form-group">
-            <select class="form-control" id="sel1">
-              <option>Topic</option>
-              <option>Topic1</option>
-              <option>Topic2</option>
-              <option>Topic3</option>
-            </select>
-          </div>
           <div class="form-group">
             <div class="row">
               <div class="col-md-6 col-lg-6">
@@ -318,7 +347,7 @@
                   type="text"
                   class="form-control"
                   id="FirstName"
-                  placeholder="Your Name"
+                  placeholder="آپ کا نام"
                   name="name"
                 />
               </div>
@@ -327,7 +356,7 @@
                   type="text"
                   class="form-control"
                   id="FirstName"
-                  placeholder="Your Email"
+                  placeholder="آپ کا ای میل"
                   name="name"
                 />
               </div>
@@ -338,12 +367,12 @@
               type="text"
               class="form-control"
               id="Descript"
-              placeholder="Description(Optional)"
+              placeholder="آپکا پیغام (اختیاری)"
               name="Descrp"
             />
           </div>
           <button type="submit" class="btn btn-success">
-            {{ "LANDING.OUR_OFFICES" | translate }}
+            {{ "LANDING.CONTACT_BUTTON" | translate }}
           </button>
         </form>
       </div>

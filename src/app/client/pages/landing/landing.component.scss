@@ -107,6 +107,20 @@ section {
     border-radius: 4px;
     margin: 20px;
     padding: 20px;
+    .box1,
+    .box2 {
+      h4 {
+        text-align: center;
+      }
+      .inner-box1,
+      .inner-box2 {
+        text-align: right;
+        a {
+          text-decoration: none;
+          color: black;
+        }
+      }
+    }
   }
   .box1-color {
     background-color: #f2f2f2;
@@ -200,6 +214,8 @@ section {
   margin: 5px 5px 0px 5px;
 }
 .provincial-offices-section {
+  display: flex;
+  flex-direction: column;
   padding: 70px 0px;
   background: #d4f5fe;
   height: 65vh;
@@ -208,6 +224,22 @@ section {
     padding: 40px;
   }
 }
+.p-carousel-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  img {
+    margin: 5px;
+  }
+}
+// .p-carousel-item {
+//   display: flex;
+//   align-items: center;
+//   img {
+//     width: 250px;
+//     margin: 5px;
+//   }
+// }
 .historical-section {
   position: relative;
   height: 60vh;
@@ -286,14 +318,6 @@ section {
 .icon2,
 .icon3 {
   margin: 05px 05px 05px 0px;
-}
-.p-carousel-item {
-  display: flex;
-  align-items: center;
-  img {
-    width: 250px;
-    margin: 5px;
-  }
 }
 #movetxt {
   -webkit-animation: moving 5s infinite;
