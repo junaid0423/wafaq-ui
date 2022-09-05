@@ -47,7 +47,7 @@
       <div class="box2">
         <h4>{{ "LANDING.LINKS" | translate }}</h4>
         <div class="inner-box2" *ngFor="let item of quickLinks">
-          <a href="item.path" download>{{ item.name }}</a>
+          <a href="{{ item.path }}" download>{{ item.name }}</a>
           <hr />
         </div>
       </div>

@@ -50,31 +50,31 @@ export class LandingComponent implements OnInit {
   quickLinks: any = [
     {
       name: 'داخلہ فارم برائے طالبات (درجہ متوسطہ تاتخصص  )بابت سالانہ ضمنی امتحان',
-      path: 'assetsdownloadsexamination-downloadsTalbat Admisstion Form.pdf',
+      path: 'assets/downloads/examination-downloads/Talbat Admisstion Form.pdf',
     },
     {
       name: 'داخلہ فارم برائےطلبہ (درجہ متوسطہ تا تخصص )بابت سالانہ ضمنی امتحان',
-      path: 'assetsdownloadsexamination-downloadsTulba Admisstion Form.pdf',
+      path: 'assets/downloads/examination-downloads/Tulba Admisstion Form.pdf',
     },
     {
       name: 'پروفارمہ بابت امتحانات زیر تکمیل حفظ القرآن طلبہ و طالبات',
-      path: 'assetsdownloadsexamination-downloadsپروفارمہ بابت امتحانات زیر تکمیل حفظ القرآن طلبہ و طالبات.pdf',
+      path: 'assets/downloads/examination-downloads/پروفارمہ بابت امتحانات زیر تکمیل حفظ القرآن طلبہ و طالبات.pdf',
     },
     {
       name: 'پروفارمہ بابت امتحانات زیر تکمیل تجوید و قرأت طلبہ و طالبات',
-      path: 'assetsdownloadsexamination-downloadsپروفارمہ بابت امتحانات زیر تکمیل تجوید قرآت طلبہ و طالبات.pdf',
+      path: 'assets/downloads/examination-downloads/پروفارمہ بابت امتحانات زیر تکمیل تجوید قرآت طلبہ و طالبات.pdf',
     },
     {
       name: 'داخلہ فارم تحفیظ القرآن',
-      path: 'assetsdownloadsexamination-downloadsتحفیظ القرآن.pdf',
+      path: 'assets/downloads/examination-downloads/تحفیظ القرآن.pdf',
     },
     {
       name: 'داخلہ فارم تجوید و قرأت',
-      path: 'assetsdownloadsexamination-downloadsتجوید وقرأت.pdf',
+      path: 'assets/downloads/examination-downloads/تجوید وقرأت.pdf',
     },
     {
       name: 'نظام الاوقات وصولی داخلہ فارم بابت سالانہ امتحانات 2023ء برائے طالبات',
-      path: 'assetsdownloadsexamination-downloadsنظام الاوقات سالانہ امتحانات 2023ء.jpg',
+      path: 'assets/downloads/examination-downloads/نظام الاوقات سالانہ امتحانات 2023ء.jpg',
     },
   ];
   constructor(private router: Router) {}
