@@ -2,7 +2,6 @@
   "name": "ui",
   "version": "0.0.0",
   "scripts": {
-    "npm start": "node server.js",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
