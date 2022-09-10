@@ -36,7 +36,7 @@
   <section class="notification-section container">
     <div class="single-notification-box box1-color">
       <div class="box1">
-        <h4>{{ "LANDING.NOTIFICATIONS" | translate }}</h4>
+        <h2>{{ "LANDING.NOTIFICATIONS" | translate }}</h2>
         <div class="inner-box1" *ngFor="let item of notifications">
           <span class="far fa-hand-point-right m-2"></span>
           <p>{{ item }}</p>
@@ -45,9 +45,9 @@
     </div>
     <div class="single-notification-box box2-color">
       <div class="box2">
-        <h4>{{ "LANDING.LINKS" | translate }}</h4>
+        <h2>{{ "LANDING.LINKS" | translate }}</h2>
         <div class="inner-box2" *ngFor="let item of quickLinks">
-          <a href="{{ item.path }}" download>{{ item.name }}</a>
+          <p><a href="{{ item.path }}" download>{{ item.name }}</a></p>
           <hr />
         </div>
       </div>
@@ -135,7 +135,7 @@
         </div>
         <div class="img-text">
           <span class="header-text"
-            ><strong>{{ item.key | translate }}</strong></span
+            ><strong><p>{{ item.key | translate }}</p></strong></span
           >
         </div>
       </div>
@@ -276,14 +276,14 @@
   <section id="objectives">
     <div class="container objectives-section">
       <div class="objective-text">
-        <h4>{{ "LANDING.OBJECTIVES" | translate }}</h4>
+        <h2>{{ "LANDING.OBJECTIVES" | translate }}</h2>
         <p *ngFor="let item of objectives">
           {{ item }}
         </p>
-        <a href="#"
-          >Read More
-          <span class="fas fa-long-arrow-alt-right arrow-setting"></span
-        ></a>
+        <a class="read-more" href="#"
+          ><span class="fas fa-long-arrow-alt-left arrow-setting"></span>
+          {{ "LANDING.OBJ_READ_MORE" | translate }}
+          </a>
       </div>
       <div class="objective-img">
         <img src="assets/logo.png" />
@@ -304,7 +304,6 @@
           <form>
             <div class="form-group">
               <input
-                style="width: 80%"
                 class="form-control"
                 type="email"
                 placeholder="ای میل لکھیں"
@@ -336,19 +335,18 @@
           {{ "LANDING.CONTACT_TEXT" | translate }}
         </p>
         <div class="icon3">
-          <span><i class="fas fa-mobile-alt"></i> +92 324 4135328</span>
+          <span>+92 324 4135328 <i class="fas fa-mobile-alt"></i></span>
           <br />
-          <span><i class="fas fa-phone-alt"></i> 0423 7554690</span>
+          <span>0423 7554690 <i class="fas fa-phone-alt"></i></span>
         </div>
         <div class="icon1">
           <span
-            ><i class="far fa-envelope"></i> wafaqulmadarisalrizvia.com</span
+            >wafaqulmadarisalrizvia.com <i class="far fa-envelope"></i></span
           >
         </div>
         <div class="icon2">
           <span
-            ><i class="fas fa-map-marker-alt"></i> Wafaq Ul Madaris Al Islamia
-            Al Rizvia, Lahore Pakistan</span
+            >{{ "LANDING.CONTACT_ADDRESS" | translate}} <i class="fas fa-map-marker-alt"></i></span
           >
         </div>
       </div>
@@ -385,14 +383,26 @@
               name="Descrp"
             />
           </div>
-          <button type="submit" class="btn btn-success">
-            {{ "LANDING.CONTACT_BUTTON" | translate }}
-          </button>
+          <div class="text-right">
+            <button type="submit" class="btn btn-success">
+              {{ "LANDING.CONTACT_BUTTON" | translate }}
+            </button>
+          </div>
         </form>
       </div>
     </div>
   </section>
   <!-- contact section ends here -->
+
+  <!-- Bank section starts here -->
+  <section class="acc-info-section">
+    <h2>{{ "LANDING.BANK_INFO_TITLE" | translate }}</h2>
+    <div class="acc-info-inner-sec">
+      <div class="acc-box1"><h3>{{ "LANDING.BANK_ACC_NO" | translate }}</h3></div>
+      <div class="acc-box2"><h3>{{ "LANDING.ORG_NAME" | translate }}<span class="mx-2 far fa-hand-point-left"></span></h3></div>
+    </div>
+  </section>
+  <!-- Bank section ends here -->
 
   <!-- Footer section starts here -->
   <app-footer></app-footer>
