@@ -49,32 +49,32 @@ export class LandingComponent implements OnInit {
   ];
   quickLinks: any = [
     {
-      name: 'داخلہ فارم برائے طالبات (درجہ متوسطہ تاتخصص  )بابت سالانہ ضمنی امتحان',
-      path: 'assets/downloads/examination-downloads/Talbat Admisstion Form.pdf',
+      name: 'داخلہ فارم برائے طالبات (درجہ متوسطہ تاتخصص  )بابت سالانہ/ضمنی امتحان',
+      path: 'https://drive.google.com/file/d/1CBxb7PAVC2yicSCuVOTb1Ps5NZJaMJwU/view?usp=sharing',
     },
     {
-      name: 'داخلہ فارم برائےطلبہ (درجہ متوسطہ تا تخصص )بابت سالانہ ضمنی امتحان',
-      path: 'assets/downloads/examination-downloads/Tulba Admisstion Form.pdf',
+      name: 'داخلہ فارم برائےطلبہ (درجہ متوسطہ تا تخصص )بابت سالانہ/ضمنی امتحان',
+      path: 'https://drive.google.com/file/d/1T9-DMgw-pO5E7CYDBvqi4i4DVtnE9Q3z/view?usp=sharing',
     },
     {
       name: 'پروفارمہ بابت امتحانات زیر تکمیل حفظ القرآن طلبہ و طالبات',
-      path: 'assets/downloads/examination-downloads/پروفارمہ بابت امتحانات زیر تکمیل حفظ القرآن طلبہ و طالبات.pdf',
+      path: 'https://drive.google.com/file/d/1LyIf7sTgdwd2R2PmQCJ0fsiJioTfLEdX/view?usp=sharing',
     },
     {
       name: 'پروفارمہ بابت امتحانات زیر تکمیل تجوید و قرأت طلبہ و طالبات',
-      path: 'assets/downloads/examination-downloads/پروفارمہ بابت امتحانات زیر تکمیل تجوید قرآت طلبہ و طالبات.pdf',
+      path: 'https://drive.google.com/file/d/1cs_tvtGn2axG7Kc9Wpk4PxVDmKbpPGBT/view?usp=sharing',
     },
     {
       name: 'داخلہ فارم تحفیظ القرآن',
-      path: 'assets/downloads/examination-downloads/تحفیظ القرآن.pdf',
+      path: 'https://drive.google.com/file/d/1Rd5pbd5rsSSAg2b0lRnpnYanGi_TSuCy/view?usp=sharing',
     },
     {
       name: 'داخلہ فارم تجوید و قرأت',
-      path: 'assets/downloads/examination-downloads/تجوید وقرأت.pdf',
+      path: 'https://drive.google.com/file/d/1le2K0kOlVGQvK7mhOGsUYGRPnVi3vNfK/view?usp=sharing',
     },
     {
       name: 'نظام الاوقات وصولی داخلہ فارم بابت سالانہ امتحانات 2023ء برائے طالبات',
-      path: 'assets/downloads/examination-downloads/نظام الاوقات سالانہ امتحانات 2023ء.jpg',
+      path: 'https://drive.google.com/file/d/1GkQIFSmA7U__oDhPW7K6Srxr6CqDkl_t/view?usp=sharing',
     },
   ];
   constructor(private router: Router) {}

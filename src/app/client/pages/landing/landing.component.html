@@ -47,7 +47,11 @@
       <div class="box2">
         <h2>{{ "LANDING.LINKS" | translate }}</h2>
         <div class="inner-box2" *ngFor="let item of quickLinks">
-          <p><a href="{{ item.path }}" download>{{ item.name }}</a></p>
+          <p>
+            <a href="{{ item.path }}" target="_blank" download>{{
+              item.name
+            }}</a>
+          </p>
           <hr />
         </div>
       </div>
@@ -135,7 +139,9 @@
         </div>
         <div class="img-text">
           <span class="header-text"
-            ><strong><p>{{ item.key | translate }}</p></strong></span
+            ><strong
+              ><p>{{ item.key | translate }}</p></strong
+            ></span
           >
         </div>
       </div>
@@ -283,7 +289,7 @@
         <a class="read-more" href="#"
           ><span class="fas fa-long-arrow-alt-left arrow-setting"></span>
           {{ "LANDING.OBJ_READ_MORE" | translate }}
-          </a>
+        </a>
       </div>
       <div class="objective-img">
         <img src="assets/logo.png" />
@@ -341,13 +347,14 @@
         </div>
         <div class="icon1">
           <span
-            >wafaqulmadarisalrizvia.com <i class="far fa-envelope"></i></span
-          >
+            >wafaqulmadarisalrizvia.com <i class="far fa-envelope"></i
+          ></span>
         </div>
         <div class="icon2">
           <span
-            >{{ "LANDING.CONTACT_ADDRESS" | translate}} <i class="fas fa-map-marker-alt"></i></span
-          >
+            >{{ "LANDING.CONTACT_ADDRESS" | translate }}
+            <i class="fas fa-map-marker-alt"></i
+          ></span>
         </div>
       </div>
       <div class="innerbox2">
@@ -394,12 +401,35 @@
   </section>
   <!-- contact section ends here -->
 
+  <!-- Map Section starts here-->
+
+  <div>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3400.5396640013923!2d74.31627351515101!3d31.53680098136413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb513957727d937cd!2zMzHCsDMyJzEyLjUiTiA3NMKwMTknMDYuNSJF!5e0!3m2!1sen!2s!4v1662983006602!5m2!1sen!2s"
+      width="100%"
+      height="450px"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
+
+  <!-- Map Section ends here-->
+
   <!-- Bank section starts here -->
   <section class="acc-info-section">
     <h2>{{ "LANDING.BANK_INFO_TITLE" | translate }}</h2>
     <div class="acc-info-inner-sec">
-      <div class="acc-box1"><h3>{{ "LANDING.BANK_ACC_NO" | translate }}</h3></div>
-      <div class="acc-box2"><h3>{{ "LANDING.ORG_NAME" | translate }}<span class="mx-2 far fa-hand-point-left"></span></h3></div>
+      <div class="acc-box1">
+        <h3>{{ "LANDING.BANK_ACC_NO" | translate }}</h3>
+      </div>
+      <div class="acc-box2">
+        <h3>
+          {{ "LANDING.ORG_NAME" | translate
+          }}<span class="mx-2 far fa-hand-point-left"></span>
+        </h3>
+      </div>
     </div>
   </section>
   <!-- Bank section ends here -->
