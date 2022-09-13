@@ -2,6 +2,7 @@
   "TITLE": "وفاق المدارس اسلامیہ الرضویہ پاکستان",
   "LANDING": {
     "OBJECTIVES": "اغراض ومقاصد",
+    "OBJ_READ_MORE": "مزید پڑھیں",
     "OFFICES": "صوبائی دفاتر",
     "DOWNLOADS": "ڈاؤن لوڈز",
     "RESULTS": "نتائج",
@@ -20,10 +21,14 @@
     "CONTACT_US": "برائے رابطہ",
     "CONTACT_TEXT": "اگر آپ کو ہمارے بارے میں کوئی سوال ہے اور آپ جواب چاہتے ہیں تو براہ کرم ہم سے بلا جھجھک رابطہ کریں",
     "CONTACT_BUTTON": "رابطہ کریں",
+    "CONTACT_ADDRESS": " وفاق المدارس الاسلامیہ الرضویہ لاہور پاکستان",
     "DOWNLOAD_HEADING": "(الورقۃ التنزیلات (ڈاؤنلوڈز",
     "EXAMINATION_DEP_DOWNLOADS": "ڈاؤن لوڈز بابت شعبہ امتحانات",
     "AFFILIATE_UNIVERSITIES_DOWNLOADS": "ڈاؤن لوڈز بابت الحاق جامعات",
     "CURRICULAM_DOWNLOADS": "تعلیمی و تربیتی شعبہ جات کا نصاب تعلیم",
-    "GENERAL_DOWNLOADS": "عمومی ڈاؤن لوڈز"
+    "GENERAL_DOWNLOADS": "عمومی ڈاؤن لوڈز",
+    "BANK_INFO_TITLE": "بینک انفارمیشن", 
+    "BANK_ACC_NO": "اکاوَنٹ نمبر: 02610106782626",
+    "ORG_NAME": "وفاق المدارس اسلامیہ الرضویہ پاکستان"
   }
 }
