@@ -1,7 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 body {
-  font-family: "Poppins";
   margin: 0;
   background-color: white;
   // text-align: right;
+}
+@font-face {
+  font-family: urduFonts;
+  src: url(assets/fonts/Jameel-Noori-Nastaleeq.woff);
+}
+*{
+  font-family: urduFonts;
 }

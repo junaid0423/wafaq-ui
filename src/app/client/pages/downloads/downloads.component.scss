@@ -42,7 +42,7 @@
       height: 3px;
     }
     .list-content-wrapper {
-      padding: 30px;
+      padding: 20px 02px 20px 05px;
       .content-element {
         display: flex;
         justify-content: flex-end;
@@ -52,6 +52,7 @@
           color: #15bc3f;
           text-decoration: none;
           text-align: right;
+          font-size: 22px;
         }
         .bullet-icon {
           i {
@@ -62,7 +63,7 @@
         }
       }
     }
-    h3 {
+    h2 {
       color: #85817f;
       text-align: right;
     }
